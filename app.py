@@ -232,7 +232,7 @@ if submitted:
 
             try:
                 result = run_travel_agent(request, llm)
-                result_mode = "gemini"
+                result_mode = "groq"
 
             except Exception as e:
 
@@ -302,9 +302,9 @@ if "travel_result" in st.session_state:
         unsafe_allow_html=True
     )
 
-    if result_mode == "gemini":
+    if result_mode == "groq":
 
-        st.success("Your plan was generated using Gemini AI.")
+        st.success("Your plan was generated using Groq AI.")
 
         st.markdown(result)
 
