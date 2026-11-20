@@ -227,8 +227,8 @@ if submitted:
         result = None
         result_mode = None
 
-        # Try Gemini first
-        with st.spinner("Gemini is planning your trip..."):
+        # Try Groq first
+        with st.spinner("Groq is planning your trip..."):
 
             try:
                 result = run_travel_agent(request, llm)
@@ -237,7 +237,7 @@ if submitted:
             except Exception as e:
 
                 st.warning(
-                    "Gemini is currently unavailable. "
+                    "Groq is currently unavailable. "
                     "Switching to the fallback travel planner."
                 )
 
