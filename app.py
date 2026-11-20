@@ -302,7 +302,7 @@ if "travel_result" in st.session_state:
         unsafe_allow_html=True
     )
 
-    if result_mode == "groq":
+    if isinstance(result, str):
 
         st.success("Your plan was generated using Groq AI.")
 
